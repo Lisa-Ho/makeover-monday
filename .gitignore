@@ -1,0 +1,24 @@
+# jupyter checkpoints
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+
+# configuration files
+*.cfg
+# except the example file
+!example-config.cfg
+
+# data files
+*.csv
+*.xlsx
+
+# pickles
+*.pkl
+*.pickle
+
+# images
+*.png
+*.jpg
+*.jpeg
