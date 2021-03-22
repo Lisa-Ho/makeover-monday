@@ -1,0 +1,64 @@
+<html>
+<head>
+    <title>Ordinal scales</title>
+        <style>
+            .line {
+                fill: none ; 
+                stroke: #555555;
+                stroke-width: 3px; 
+            }
+        </style>
+</head>
+<body>
+    <svg id="container" height="300" width="500">
+        <g id="body" style="transform:translate(50px, 50px)"></g>
+    </svg>
+</body>
+<script src="https://d3js.org/d3.v6.js"></script>
+<script>
+    let body = d3.select("#body")
+
+    d3.csv("data.csv").then(showData)
+
+    function showData(data) {
+        let bodyHeight = 200
+        let bodyWidth = 400
+
+        data = data.map(d => ({
+               date: new Date(d.date),
+               price: +d.price
+        }))
+
+        let maxValue = d3.max(data, d => d.price)
+
+        let yScale = d3.scaleLinear()
+            .range([bodyHeight, 0])
+            .domain([0, maxValue])
+        
+        body.append("g")
+            .call(d3.axisLeft(yScale))
+
+        let xScale = d3.scaleTime()
+            .domain(d3.extent(data, d => d.date))
+            .range([0, bodyWidth])     
+
+        body.append("g")
+            .attr("transform", "translate(0, 200)")
+            .call(d3.axisBottom(xScale) 
+                .tickFormat(d3.timeFormat("%b")))
+
+        valueline = d3.line()
+            .x(d => xScale(d.date))
+            .y(d => yScale(d.price))
+            // to remove those months where there is no data point and create a broke line
+            .defined(d => !!d.price) 
+        
+        body.append("path")
+            .datum(data)
+            .attr("d", valueline)
+            .attr("class", "line")
+    }
+
+</script>
+
+</html>
