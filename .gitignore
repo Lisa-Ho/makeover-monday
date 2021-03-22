@@ -22,3 +22,6 @@ __pycache__/
 *.png
 *.jpg
 *.jpeg
+
+# except the final chart
+!final-chart.png
