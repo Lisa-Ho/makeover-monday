@@ -23,5 +23,6 @@ __pycache__/
 *.jpg
 *.jpeg
 
-# except the final chart
+# except the final and original chart
 !final-chart.png
+!original-chart.png
