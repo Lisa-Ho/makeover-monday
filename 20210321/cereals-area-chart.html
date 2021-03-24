@@ -4,39 +4,47 @@
         <style>
             .line {
                 fill: none ; 
-                stroke: #555555;
+                stroke: #4185b3;
                 stroke-width: 3px; 
             }
         </style>
 </head>
 <body>
+    <h1>This is a title</h1>
     <svg id="container" height="300" width="500">
         <g id="body" style="transform:translate(50px, 50px)"></g>
     </svg>
 </body>
-<script src="https://d3js.org/d3.v6.js"></script>
+<script src="d3.js"></script>
 <script>
     let body = d3.select("#body")
 
-    d3.csv("data.csv").then(showData)
+    d3.csv("cereals-data-for-d3.csv").then(showData)
 
     function showData(data) {
         let bodyHeight = 200
         let bodyWidth = 400
 
         data = data.map(d => ({
-               date: new Date(d.date),
-               price: +d.price
+               date: new Date(d.Date),
+               // date: d.Date,
+               cereals: +d.Cereals,
+               total: +d.Total
         }))
 
-        let maxValue = d3.max(data, d => d.price)
+        console.log(data)
+
+        let maxValue = d3.max(data, d => d.cereals * 1.03)
 
         let yScale = d3.scaleLinear()
             .range([bodyHeight, 0])
             .domain([0, maxValue])
         
         body.append("g")
-            .call(d3.axisLeft(yScale))
+            .call(d3.axisLeft(yScale)
+                .ticks(5)
+                .tickFormat(x => `$${x/1000}bn`)
+                    )
 
         let xScale = d3.scaleTime()
             .domain(d3.extent(data, d => d.date))
@@ -45,13 +53,25 @@
         body.append("g")
             .attr("transform", "translate(0, 200)")
             .call(d3.axisBottom(xScale) 
-                .tickFormat(d3.timeFormat("%b")))
-
+                .ticks(5)
+                )
+        
         valueline = d3.line()
             .x(d => xScale(d.date))
-            .y(d => yScale(d.price))
-            // to remove those months where there is no data point and create a broke line
-            .defined(d => !!d.price) 
+            .y(d => yScale(d.cereals))
+
+        curve = d3.curveLinear
+
+        area = d3.area()
+            .curve(curve)
+            .x(d => xScale(d.date))
+            .y0(yScale(0))
+            .y1(d => yScale(d.cereals))
+        
+        body.append("path")
+            .datum(data)
+            .attr("d", area)
+            .attr("fill", "#333333")
         
         body.append("path")
             .datum(data)
