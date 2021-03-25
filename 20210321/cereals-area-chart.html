@@ -4,8 +4,16 @@
         <style>
             .line {
                 fill: none ; 
-                stroke: #4185b3;
-                stroke-width: 3px; 
+                stroke: #184b5a;
+                stroke-width: 1px; 
+            }
+
+            .area {
+                fill:  #184b5a;
+            }
+
+            .area-highlight {
+                fill:  #15a4cf;
             }
         </style>
 </head>
@@ -30,12 +38,26 @@
                // date: d.Date,
                cereals: +d.Cereals,
                total: +d.Total
+
+        
         }))
 
-        console.log(data)
+
+        let date = data.filter(d => {
+             return d.date 
+         });
+
+
+
+        console.log("data -->",data);
+        console.table(data);
+        console.table("date", date);
+        console.log(filteredData)
+
 
         let maxValue = d3.max(data, d => d.cereals * 1.03)
 
+        // create y-axis
         let yScale = d3.scaleLinear()
             .range([bodyHeight, 0])
             .domain([0, maxValue])
@@ -46,20 +68,23 @@
                 .tickFormat(x => `$${x/1000}bn`)
                     )
 
+        // create x-axis
         let xScale = d3.scaleTime()
             .domain(d3.extent(data, d => d.date))
             .range([0, bodyWidth])     
-
+        
         body.append("g")
             .attr("transform", "translate(0, 200)")
             .call(d3.axisBottom(xScale) 
                 .ticks(5)
                 )
         
+        // define line values
         valueline = d3.line()
             .x(d => xScale(d.date))
             .y(d => yScale(d.cereals))
 
+        // define values for full area
         curve = d3.curveLinear
 
         area = d3.area()
@@ -68,11 +93,13 @@
             .y0(yScale(0))
             .y1(d => yScale(d.cereals))
         
+        // append full area 
         body.append("path")
             .datum(data)
             .attr("d", area)
-            .attr("fill", "#333333")
+            .attr("class", "area")
         
+        // append line
         body.append("path")
             .datum(data)
             .attr("d", valueline)
