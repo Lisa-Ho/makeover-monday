@@ -4,17 +4,26 @@
         <style>
             .line {
                 fill: none ; 
-                stroke: #184b5a;
+                stroke: #266e38;
                 stroke-width: 1px; 
             }
 
             .area {
-                fill:  #184b5a;
+                fill:  #525455;
             }
 
-            .area-highlight {
-                fill:  #15a4cf;
+            .area_highlight {
+                fill:  #ff9100;
             }
+
+            #tooltip {
+                border: solid 1px black;
+                padding: 5px;
+                position: absolute;
+                display: none; 
+                background-color: white; 
+        }
+
         </style>
 </head>
 <body>
@@ -22,12 +31,20 @@
     <svg id="container" height="300" width="500">
         <g id="body" style="transform:translate(50px, 50px)"></g>
     </svg>
+        <div id="tooltip">Tooltip</div>
 </body>
 <script src="d3.js"></script>
 <script>
     let body = d3.select("#body")
 
     d3.csv("cereals-data-for-d3.csv").then(showData)
+
+    function showTooltip(text, coords) {
+        d3.select("#tooltip").html(text)
+            .style("top", coords[1] + 10)
+            .style("left", coords[0])
+            .style("display", "block")
+    }
 
     function showData(data) {
         let bodyHeight = 200
@@ -37,23 +54,19 @@
                date: new Date(d.Date),
                // date: d.Date,
                cereals: +d.Cereals,
-               total: +d.Total
-
-        
+               total: +d.Total        
         }))
 
-
-        let date = data.filter(d => {
-             return d.date 
+        // get subset of data from Jan 2020 onwards
+        let data_filtered = data.filter(d => {
+             if (Date.parse(d.date) > 
+                Date.parse("Dec 01 2019")) {
+                    return d.date
+                }
          });
 
-
-
-        console.log("data -->",data);
-        console.table(data);
-        console.table("date", date);
-        console.log(filteredData)
-
+        // check if correct filtered data is returned
+        //console.table(data_filtered);
 
         let maxValue = d3.max(data, d => d.cereals * 1.03)
 
@@ -92,18 +105,44 @@
             .x(d => xScale(d.date))
             .y0(yScale(0))
             .y1(d => yScale(d.cereals))
+
         
         // append full area 
         body.append("path")
             .datum(data)
             .attr("d", area)
             .attr("class", "area")
+
+            // change area chart colour on click
+            // .on("click", function(d) {this.style.fill="green"})
+           
         
+        // append full area 
+            body.append("path")
+            .datum(data_filtered)
+            .attr("d", area)
+            .attr("class", "area_highlight")
+        
+
         // append line
         body.append("path")
             .datum(data)
             .attr("d", valueline)
             .attr("class", "line")
+            .on("mouseenter", d => {
+                // pass text and coordinates to the function
+                showTooltip(d.cereals + "<br/>" + " $" + "m", 
+                            [d3.event.clientX, d3.event.clientY])
+            })
+            .on("mousemove", d => {
+                // pass text and coordinates to the function
+                showTooltip(d.cereals + "<br/>" + " $", 
+                            [d3.event.clientX, d3.event.clientY]) 
+            })
+            .on("mouseleave", d => {
+                d3.select("#tooltip").style("display", "none")
+            })
+           
     }
 
 </script>
