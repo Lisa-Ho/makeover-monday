@@ -24,4 +24,6 @@ Easy start experimenting with matplotlib. Tried to recreate the original chart b
 
 Decided to start exploring Tableau a bit and had a go at creating my first dashboard for week 16. Inspiration from [Taylor Johnson](https://twitter.com/TF_Johnston/status/1384518109617430535?s=20). Final result [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W16/Dashboard).
 
+### Week 19
 
+Second Tableau data viz trying to replicate [this dashboard](https://public.tableau.com/profile/priyanka.dobhal0993#!/vizhome/MakeoverMonday2021Week19-WhatDoes1GBofMobileDataCostinEveryCountry_16216222730720/MOM2021W19) made by Priyanka Dobhal. I learned how to create a beeswarm chart and how to highlight individual data points using a dropdown list. Final result [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W19/Dashboard1).
