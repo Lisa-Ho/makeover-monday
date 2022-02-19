@@ -28,6 +28,11 @@ Decided to start exploring Tableau a bit and had a go at creating my first dashb
 
 Second Tableau data viz trying to replicate [this dashboard](https://public.tableau.com/profile/priyanka.dobhal0993#!/vizhome/MakeoverMonday2021Week19-WhatDoes1GBofMobileDataCostinEveryCountry_16216222730720/MOM2021W19) made by Priyanka Dobhal. I learned how to create a beeswarm chart and how to highlight individual data points using a dropdown list. Interactive version [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W19/Dashboard1).
 
+### Week 22
+
+Third Tableau data viz looking into single plastic producers. Spent a bit more time with design elements and am quite pleased with the end result. Interactive version [here](https://public.tableau.com/app/profile/lisa.hornung7353/viz/MakeoverMonday-2021-W22/Dashboard1). 
+![makeovermonday-2021-w22-final](https://user-images.githubusercontent.com/50448656/154820433-1750780f-6ec4-4350-85b3-61ee9dcebae0.PNG)
+
 ## 2020
 
 ### Week 1
