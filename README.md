@@ -6,7 +6,7 @@ I decided to use this challenge as a way to improve my data viz skills using dif
 
 - [Matplotlib](https://matplotlib.org/), a charting library for python, 
 - [D3](https://d3js.org/), an interactive charting library based on javascript. 
-- Tableau 
+- [Tableau](https://public.tableau.com/app/profile/lisa.hornung7353)
 
 It means that I don't have to come up with new project ideas for myself all the time as well as source suitable data sets and clean them. 
 
@@ -37,5 +37,5 @@ Third Tableau data viz looking into single plastic producers. Spent a bit more t
 
 ### Week 1
 
-Revived this repository and had a go at week 1 for 2020. Final chart is using a complex layout of subplots and small multiples with highlights. Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
+Revived this repository and had a go at week 1 for 2020. Final chart made in matplotlib is using a complex layout of subplots and small multiples with highlights. Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
 ![final-chart](https://user-images.githubusercontent.com/50448656/154820316-5d7aa899-d6d1-4091-aa6c-b1c37d8feffc.png)
