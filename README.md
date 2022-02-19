@@ -27,3 +27,9 @@ Decided to start exploring Tableau a bit and had a go at creating my first dashb
 ### Week 19
 
 Second Tableau data viz trying to replicate [this dashboard](https://public.tableau.com/profile/priyanka.dobhal0993#!/vizhome/MakeoverMonday2021Week19-WhatDoes1GBofMobileDataCostinEveryCountry_16216222730720/MOM2021W19) made by Priyanka Dobhal. I learned how to create a beeswarm chart and how to highlight individual data points using a dropdown list. Final result [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W19/Dashboard1).
+
+## 2020
+
+### Week 1
+
+Revived this repository and had a go at week 1 for 2020. Final chart is using a complex layout of subplots and small multiples with highlights. Check it out [here](https://github.com/Lisa-Ho/makeover-monday/blob/94eb55cf4972666c6ca51efb2adf10714f2631b5/2020-W01/final-chart.png). Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
