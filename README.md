@@ -39,3 +39,10 @@ Third Tableau data viz looking into single plastic producers. Spent a bit more t
 
 Revived this repository and had a go at week 1 for 2020. Final chart made in matplotlib is using a complex layout of subplots and small multiples with highlights. Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
 ![final-chart](https://user-images.githubusercontent.com/50448656/154820316-5d7aa899-d6d1-4091-aa6c-b1c37d8feffc.png)
+
+### Week 2
+
+Quick chart in Python trying a new library to create waffle charts ([pywaffle](https://pywaffle.readthedocs.io/en/latest/index.html)). Also found a good [tutorial](https://regenerativetoday.com/how-to-build-waffle-charts-in-python/) for creating waffle charts using only matplotlib, pandas and numpy. 
+
+![MakeoverMonday2020W02_use-of-pesticides-USA](https://user-images.githubusercontent.com/50448656/154856274-c1487ffa-1b6e-4161-9ea9-6d8ec254be46.png)
+
