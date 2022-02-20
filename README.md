@@ -6,7 +6,7 @@ I decided to use this challenge as a way to improve my data viz skills using dif
 
 - [Matplotlib](https://matplotlib.org/), a charting library for python, 
 - [D3](https://d3js.org/), an interactive charting library based on javascript. 
-- Tableau 
+- [Tableau](https://public.tableau.com/app/profile/lisa.hornung7353)
 
 It means that I don't have to come up with new project ideas for myself all the time as well as source suitable data sets and clean them. 
 
@@ -26,4 +26,16 @@ Decided to start exploring Tableau a bit and had a go at creating my first dashb
 
 ### Week 19
 
-Second Tableau data viz trying to replicate [this dashboard](https://public.tableau.com/profile/priyanka.dobhal0993#!/vizhome/MakeoverMonday2021Week19-WhatDoes1GBofMobileDataCostinEveryCountry_16216222730720/MOM2021W19) made by Priyanka Dobhal. I learned how to create a beeswarm chart and how to highlight individual data points using a dropdown list. Final result [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W19/Dashboard1).
+Second Tableau data viz trying to replicate [this dashboard](https://public.tableau.com/profile/priyanka.dobhal0993#!/vizhome/MakeoverMonday2021Week19-WhatDoes1GBofMobileDataCostinEveryCountry_16216222730720/MOM2021W19) made by Priyanka Dobhal. I learned how to create a beeswarm chart and how to highlight individual data points using a dropdown list. Interactive version [here](https://public.tableau.com/profile/lisa.hornung7353#!/vizhome/MakeoverMonday-2021-W19/Dashboard1).
+
+### Week 22
+
+Third Tableau data viz looking into single plastic producers. Spent a bit more time with design elements and am quite pleased with the end result. Interactive version [here](https://public.tableau.com/app/profile/lisa.hornung7353/viz/MakeoverMonday-2021-W22/Dashboard1). 
+![makeovermonday-2021-w22-final](https://user-images.githubusercontent.com/50448656/154820433-1750780f-6ec4-4350-85b3-61ee9dcebae0.PNG)
+
+## 2020
+
+### Week 1
+
+Revived this repository and had a go at week 1 for 2020. Final chart made in matplotlib is using a complex layout of subplots and small multiples with highlights. Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
+![final-chart](https://user-images.githubusercontent.com/50448656/154820316-5d7aa899-d6d1-4091-aa6c-b1c37d8feffc.png)
