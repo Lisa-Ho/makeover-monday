@@ -38,6 +38,7 @@ Third Tableau data viz looking into single plastic producers. Spent a bit more t
 ### Week 1
 
 Revived this repository and had a go at week 1 for 2020. Final chart made in matplotlib is using a complex layout of subplots and small multiples with highlights. Super grateful for the amazing guides posted on the [Python Gallery](https://www.python-graph-gallery.com/web-highlighted-lineplot-with-faceting). Still lots to learn ...
+
 ![final-chart](https://user-images.githubusercontent.com/50448656/154820316-5d7aa899-d6d1-4091-aa6c-b1c37d8feffc.png)
 
 ### Week 2
