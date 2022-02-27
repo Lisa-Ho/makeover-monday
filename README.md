@@ -47,3 +47,10 @@ Quick chart in Python trying a new library to create waffle charts ([pywaffle](h
 
 ![MakeoverMonday2020W02_use-of-pesticides-USA](https://user-images.githubusercontent.com/50448656/154856274-c1487ffa-1b6e-4161-9ea9-6d8ec254be46.png)
 
+### Week 3
+
+Multiple bar chart in python looking at sugar calorie intake by age group, includes benchmark annotation and arrow pointer. Started exploring [streamlit](https://streamlit.io/) for publishing interactive version of this chart that would allow displaying data by gender. A todo for another day ....
+
+![MakeoverMonday2020W03_sugar-calorie-intake](https://user-images.githubusercontent.com/50448656/155895565-568669c4-304c-438a-85c7-e1e4c387bd1b.png)
+
+
