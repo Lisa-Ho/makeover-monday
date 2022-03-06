@@ -53,4 +53,9 @@ Multiple bar chart in python looking at sugar calorie intake by age group, inclu
 
 ![MakeoverMonday2020W03_sugar-calorie-intake](https://user-images.githubusercontent.com/50448656/155895565-568669c4-304c-438a-85c7-e1e4c387bd1b.png)
 
+### Week 5
+
+Quick one in python looking at who the next James Bond should be by Brexit votes. Used the opportunity to create my first dumbell plot in matplotlib. With a bit more time, I might have added some James Bond design elements, but tried to keep this to 1 hour.
+
+![MakeoverMonday2020W05_brexit-bond](https://user-images.githubusercontent.com/50448656/156924672-cbf65a87-2509-4d7c-a6b6-0d11a4a5208a.png)
 
