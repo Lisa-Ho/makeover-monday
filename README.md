@@ -66,7 +66,7 @@ Update: Spend a bit more time experimenting adding images to plots. Now shows th
 
 ### Week 6
 
-Getting better at adding annotations and found a way of adding fancy arrows with curves. This weeks chart looks at how much proportion of people's life is spend with US being at war. Depressing to see that America has been at war for so many years. 
+Getting better at adding annotations, found a way of adding fancy arrows with curves and added a custom font (Raleway). This weeks chart looks at how much proportion of people's life is spend with US being at war. Depressing to see that America has been at war for so many years. 
 
 ![MakeoverMonday2020W06_US-at-war](https://user-images.githubusercontent.com/50448656/158071933-d127fbe7-0fea-4197-86b1-ee315f397749.png)
 
