@@ -59,3 +59,7 @@ Quick one in python looking at who the next James Bond should be by Brexit votes
 
 ![MakeoverMonday2020W05_brexit-bond](https://user-images.githubusercontent.com/50448656/156924672-cbf65a87-2509-4d7c-a6b6-0d11a4a5208a.png)
 
+Update: Spend a bit more time experimenting adding images to plots. Now shows the 007 logo in the title.
+
+![MakeoverMonday2020W05_brexit-bond](https://user-images.githubusercontent.com/50448656/158057502-54aa3cea-2bf2-45d7-a25e-488b323b03fb.png)
+
